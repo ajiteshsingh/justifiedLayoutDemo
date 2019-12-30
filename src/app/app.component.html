@@ -1,16 +1,19 @@
 <div class="header">Justified Layout demo</div>
 
-<div id="gallery-container" class="photos-gallery-wrapper">
-  <ng-container *ngIf="images.length > 0">
-    <ng-container *ngFor="let image of images">
-      <ng-container *ngIf="image.boxConfig">
-        <div class="image-result" [style.top]="image.boxConfig.top + 'px'" 
-        [style.left]="image.boxConfig.left + 'px'"
-          [style.height]="image.boxConfig.height + 'px'" [style.width]="image.boxConfig.width + 'px'">
-          <img [src]="image.thumbnail_url" alt="">
-        </div>
+<div class="row wrapper"> 
+  
+  <div id="gallery-container" class="col-12 photos-gallery-wrapper">
+    <ng-container *ngIf="images.length > 0">
+      <ng-container *ngFor="let image of images">
+        <ng-container *ngIf="image.boxConfig">
+          <div class="image-result" [style.top]="image.boxConfig.top + 'px'" 
+          [style.left]="image.boxConfig.left + 'px'"
+            [style.height]="image.boxConfig.height + 'px'" [style.width]="image.boxConfig.width + 'px'">
+            <img [src]="image.thumbnail_url" alt="">
+          </div>
+        </ng-container>
       </ng-container>
     </ng-container>
-  </ng-container>
-
+  
+  </div>
 </div>

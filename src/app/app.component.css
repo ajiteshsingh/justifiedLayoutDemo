@@ -1,5 +1,5 @@
 .photos-gallery-wrapper {
-    width: 640px;
+    /* width: 640px; */
     position: relative;
 }
 
@@ -14,4 +14,6 @@ img {
 
 .header {
     font-size: larger;
+    display: flex;
+    justify-content: center;
 }

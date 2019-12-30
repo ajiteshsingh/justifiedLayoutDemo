@@ -1,5 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
-import * as justifiedLayout from './justified-layout';
+import * as justifiedLayout from 'justified-layout';
 
 @Component({
   selector: 'app-root',
@@ -18,15 +18,15 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    const header = new Headers({
-      'Access-Control-Allow-Origin': '*',
-      'Content-Type': 'application/json'
-    });
-    let sentData = {
-      method: 'GET',
-      mode: 'cors',
-      header: header,
-    };
+    // const header = new Headers({
+    //   'Access-Control-Allow-Origin': '*',
+    //   'Content-Type': 'application/json'
+    // });
+    // let sentData = {
+    //   method: 'GET',
+    //   mode: 'cors',
+    //   header: header,
+    // };
     fetch(this.dummyDataUrl)
       .then((res) => {
         return res.json()
@@ -44,7 +44,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     const containerWidth = document.getElementById('gallery-container').clientWidth;
     const config = {
       'containerWidth' : containerWidth,
-      'targetRowHeight': 120
+      'targetRowHeight': 200
     };
     const geometry = justifiedLayout(this.geometry, config);
     const boxes = geometry['boxes'];

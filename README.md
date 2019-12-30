@@ -25,3 +25,10 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+Steps to implement justified layout in angular
+
+1. npm install jusitified-layout
+2. importing in your respective component (import * as justifiedLayout from 'justified-layout')
+3.  use justifiedLayout(arrayOfImagesWithAspectRatio, config). Read to customization to pass in the config here - http://flickr.github.io/justified-layout/
